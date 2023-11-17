@@ -1,0 +1,189 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+#seccionForm {
+    background-color: #444;
+    padding: 20px;
+    margin: 20px auto;
+    width: 50%;
+    border-radius: 5px;
+}
+
+legend {
+    font-size: 18px;
+    color: #fff;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select
+{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    color: #fff;
+    background-color: #555;
+    border-radius: 0.4vw;
+    border: none;
+    outline: none;
+    transition: .4s;
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder
+{
+    color: #ccc;
+}
+input[type="text"]:hover,
+input[type="number"]:hover,
+select:hover
+{
+    box-shadow: 0 0 0 .15vw rgba(135, 207, 235, 0.186);
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus
+{
+    box-shadow: 0 0 0 .15vw rgb(175, 175, 175);
+}
+
+input[type="button"],
+input[type="submit"]{
+    background-color: #686868;
+    color: #fff;
+    padding: 8px 26px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#btnGuardarAbm:not([disabled]){
+    background-color: #007bff;
+    margin-left: 10px;
+}
+
+.btnModificar:not([disabled]),
+.btnModificarAbm:not([disabled]){
+    background-color: #28803b;
+    margin-left: 10px;
+}
+
+.btnEliminar:not([disabled]),
+.btnEliminarAbm:not([disabled]){
+    background-color: #dc3545;
+    margin-left: 10px;
+}
+
+#btnCalcular:not([disabled]){
+    background-color: #007bff;
+    margin-left: 10px;
+}
+
+#btnAgregarElemento:not([disabled]){
+    background-color: #007bff;
+    margin-left: 10px;
+}
+
+#botones {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form{
+    margin: 5% auto;
+    margin-bottom: 5;
+    margin-top: 5;
+    width: 90%;
+    background-color: #444;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+#seccionTable table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#seccionTable th, #seccionTable td {
+    border: none;
+    padding: 10px;
+    text-align: center;
+}
+
+#seccionTable thead {
+    margin: 14% auto;
+    width: 90%;
+    border-collapse: collapse;
+    background-color: rgb(51, 51, 51);
+    border-radius: 10%;
+    padding: 20px;
+    color: #fff;
+}
+#seccionTable tr:hover{
+    background-color: rgb(61, 61, 61);
+}
+
+#contenedorSpinner {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(20px);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.spinner {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    position: relative;
+    border: 3px solid;
+    border-color:#007bff #0000 #fff #0000;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: 1s rotate linear infinite;
+ }
+ .spinner:before , .loader:after{
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    border: 10px solid transparent;
+    border-bottom-color:#fff;
+    transform: translate(-10px, 19px) rotate(-35deg);
+  }
+ .spinner:after {
+    border-color: #007bff #0000 #0000 #0000 ;
+    transform: translate(32px, 3px) rotate(-35deg);
+  }
+   @keyframes rotate {
+    100%{    transform: rotate(360deg)}
+  }

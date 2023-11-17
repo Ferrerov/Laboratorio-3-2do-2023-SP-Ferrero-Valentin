@@ -1,0 +1,90 @@
+<html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segundo Parcial</title>
+    <link rel="stylesheet" href="./estilos.css">
+    <script src="./Script.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <h1>LABO III - SP - VALENTIN FERRERO</h1>
+    </header>
+    <section id="seccionAbm">
+        <form id="formAbm" hidden>
+            <fieldset id="fieldCampos">
+                <legend id="legendAbm">Formulario ABM</legend>
+                <p>
+                <label for="txtId" id="lblId">Id:</label>
+                <input type="text" id="txtId" name="id" value="" disabled>
+                </p>
+                <p>
+                <label for="txtNombre" id="lblNombre">Nombre:</label>
+                <input type="text" id="txtNombre" name="nombre" value="" placeholder="Nombre" required>
+                </p>
+                <p>
+                <label for="txtApellido" id="lblApellido">Apellido:</label>
+                <input type="text" id="txtApellido" name="apellido" value="" placeholder="Apellido" required>
+                </p> 
+                <p>
+                <label for="txtEdad" id="lblEdad">Edad:</label>
+                <input type="number" id="txtEdad" name="edad" value="" min="16" placeholder="Edad" required>
+                </p>
+                <p>
+                    <label for="slcTipoAbm" id="lblTipo">Tipo:</label>
+                    <select id="slcTipoAbm" class="tipoPersona" name="tipoPersona"  class="field" required >
+                        <option value="" disabled selected hidden>Seleccione un tipo</option>
+                        <option value="Futbolista">Futbolista</option>
+                        <option value="Profesional">Profesional</option>
+                    </select>
+                </p>
+                <div id="fieldFutbolista" hidden>
+                    <p>
+                        <label for="txtEquipo" id="lblEquipo">Equipo:</label>
+                        <input id="txtEquipo" type="text" name="equipo" placeholder="Equipo" class="field">
+                    </p>
+                    <p>
+                        <label for="txtPosicion" id="lblPosicion">Posicion:</label>
+                        <input id="txtPosicion" type="text" name="posicion" placeholder="Posicion" class="field" >
+                    </p>
+                    <p>
+                        <label for="txtCantidadGoles" id="lblCantidadGoles">Cantidad de goles:</label>
+                        <input id="txtCantidadGoles" type="number" name="cantidadGoles" placeholder="Cantidad de goles" class="field" min="0" >
+                    </p>
+                </div>
+                <div id="fieldProfesional" hidden>
+                    <p>
+                        <label for="txtTitulo" id="lblTitulo">Titulo:</label>
+                        <input id="txtTitulo" type="text" name="titulo" placeholder="Titulo" class="field">
+                    </p>
+                    <p>
+                        <label for="txtFacultad" id="lblFacultad">Facultad:</label>
+                        <input id="txtFacultad" type="text" name="facultad" placeholder="Facultad" class="field" >
+                    </p>
+                    <p>
+                        <label for="txtAñoGraduacion" id="lblAñoGraduacion">Año de graduacion:</label>
+                        <input id="txtAñoGraduacion" type="number" name="añoGraduacion" placeholder="Año de graduacion" class="field" min="1951" >
+                    </p>
+                </div>
+            </fieldset>
+            <p id="botones">
+                <input type="submit" id="btnGuardarAbm" value="Guardar" class="btnGuardarAbm" !disabled !hidden>
+                <input type="button" id="btnEliminarAbm" value="Eliminar" class="btnEliminarAbm" hidden>
+                <input type="button" id="btnModificarAbm" value="Modificar" class="btnModificarAbm" hidden>
+                <input type="button" id="btnCancelarAbm" value="Cancelar" class="btnCancelarAbm" !hidden>
+            </p>
+        </form>
+    </section>
+    <section id="seccionDatos">
+        <form id="formDatos" !hidden>
+        <section id="seccionTable">
+        </section>
+        <input type="submit" id="btnAgregarElemento" value="Agregar elemento" class="boton" !disabled>
+        </form>
+    </section>
+    <div id="contenedorSpinner">
+        <div class="spinner"></div>
+    </div>
+</body>
+</html></html>
